@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@foreach (var item in Model.Images)
+{
+    
+}
+<div class="cardsSide">
+    <div class="cardsSide-card">
+        <div class="card-image">
+            @foreach (var item in Model.Images)
+            {
+                <img src="~/img/@item.ImageUrl" alt="">
+            }
+
+        </div>
+        <div class="priceAndTitleFlex">
+            <div class="card-title">
+                <span>
+                    @foreach (var item in Model.Card)
+                    {
+                        @item.Title
+                    }
+                </span>
+            </div>
+            <div class="card-price">
+                $ @foreach (var item in Model.Card)
+                {
+                    @item.Price
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
